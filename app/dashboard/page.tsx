@@ -309,7 +309,7 @@ export default function Dashboard() {
                 <div style={{ display: 'flex', gap: '12px' }}>
                   <StatBox label="SESSIONS" val={weekSessions.length.toString()} />
                   <StatBox label="KM RUN" val={totalKm7d.toFixed(1)} />
-                  <StatBox label="TYPES" val={[...new Set(weekSessions.map(s => s.type))].length.toString()} />
+                  <StatBox label="TYPES" val={Array.from(new Set(weekSessions.map(s => s.type))).length.toString()} />
                 </div>
               </div>
               <div style={{ height: '65px', marginBottom: '10px' }}>
